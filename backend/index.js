@@ -27,9 +27,9 @@ mongoose.connect(process.env.MONGO_URI)
 .catch(err => console.error(err));
 
 // Serve static files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'frontend')));
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'register.html'));
+  res.sendFile(path.join(__dirname, 'frontend', 'register.html'));
 });
 
 const PORT = process.env.PORT || 8000;
