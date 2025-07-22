@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #fce4ec);
+  min-height: 100vh;
+  padding: 30px;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 35px 25px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings */
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 600;
+  color: #222;
+}
+
+h1 span {
+  display: inline-block;
+  transition: transform 0.6s ease;
+}
+
+h1 span:hover {
+  transform: rotate(360deg);
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input,
+select {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* Buttons */
+button {
+  padding: 12px;
+  background: #007bff;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* Task Cards */
+.task {
+  background: #fdfdfd;
+  padding: 16px 20px;
+  margin-bottom: 15px;
+  border-left: 6px solid #007bff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
+  transition: background 0.3s ease;
+}
+
+.task:hover {
+  background: #f8f9fa;
+}
+
+.task.completed {
+  border-left-color: #28a745;
+}
+
+.task.pending {
+  border-left-color: #ffc107;
+}
+
+/* Task Info */
+.task strong {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+/* Action Buttons inside Task */
+.task button {
+  margin-top: 10px;
+  margin-right: 8px;
+  font-size: 14px;
+  padding: 8px 12px;
+  background-color: #28a745;
+  border-radius: 6px;
+}
+
+.task button:hover {
+  background-color: #218838;
+}
+
+.task .delete-btn {
+  background-color: #dc3545;
+}
+
+.task .delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* Logout Button */
+.logout-btn {
+  background: #ff4757;
+  margin-top: 25px;
+  display: block;
+  width: 100%;
+}
+
+.logout-btn:hover {
+  background: #e84118;
+}
+
+/* Toast Notification */
+#toastContainer {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toast {
+  background-color: #007bff;
+  color: #fff;
+  padding: 12px 18px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease forwards;
+}
+
+.toast.success {
+  background-color: #28a745;
+}
+
+.toast.error {
+  background-color: #dc3545;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+  .container {
+    padding: 25px 15px;
+  }
+
+  .task {
+    padding: 14px;
+  }
+
+  button {
+    font-size: 15px;
+  }
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #444;
+  font-size: 14px;
+  color: #eee;
+  background-color: #333; /* darker gray background */
+  border-radius: 8px;
+}
+
+.footer a {
+  color: #4da3ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+  color: #6cb4ff;
+}
+
+.footer span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #ccc;
+}

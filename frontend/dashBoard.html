@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Task Manager</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+
+    <h1><span class="icon-animate">📋</span> Task Manager</h1>
+
+    <!-- Task Form -->
+    <h2>Create New Task</h2>
+    <form id="taskForm">
+      <input type="text" id="title" placeholder="Task title" required /><br />
+      <input type="text" id="category" placeholder="Category (optional)" /><br />
+      <input type="text" id="tags" placeholder="Tags (comma separated)" /><br />
+      <input type="date" id="deadline" placeholder="Deadline (optional)" /><br />
+      <button type="submit"> Add Task </button>
+    </form>
+
+    <hr />
+    <br>
+    <br>
+    <!-- Task List -->
+    <h2>Your Tasks</h2>
+    <div id="taskList"></div>
+
+    <!-- Logout Button -->
+    <button class="logout-btn" onclick="logout()">Logout</button>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer"></div>
+
+  </div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>
+      Developed by
+      <i class="fab fa-linkedin" style="margin-right: 6px;"></i>
+      <a href="https://www.linkedin.com/in/lakshya-runthala-6433b1257/" target="_blank" rel="noopener">
+        Lakshya Runthala
+      </a>
+      <br />
+      <span>&copy; 2025 Lakshya Runthala</span>
+    </p>
+    <p>
+      Suggestions 📩
+      <a href="mailto:runthalalakshya57@gmail.com" class="gmail">runthalalakshya57@gmail.com</a>
+    </p>
+  </footer>
+
+</body>
+
+</html>
